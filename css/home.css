@@ -1,0 +1,18 @@
+
+/* LOGO GANHESH CENTRO PÁGINA INICIAL */
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 24%;
+    padding: 100px 0px 20px 0px;   
+}
+
+#subtitulo{
+    font-size: 50px;
+    color: white;
+
+}
