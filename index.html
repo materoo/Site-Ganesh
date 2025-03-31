@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navs.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO DO SITE -->
+    <nav class="cabecalho">
+        <div class="direita">
+            <a href="index.html"><img src="img/ganesh-logo-white.svg" alt="Ganesh"></a>
+        </div>
+
+        <div class="esquerda">
+            <a href="noticias.html">Notícias</a>
+            <a href="#" id="trocarIdioma"><img src="img/lang-icon.png" alt="Idioma"> <span id="idiomaTexto">en-US</span></a>
+        </div>
+    </nav>
+
+    <!-- LOGO GANESH COM TEXTO -->
+    <div class="logo">
+        <img src="img/ganesh-logo.png" alt="Logo Ganesh">
+        <h2 id="subtitulo"></h2>
+    </div>
+
+    <!-- SOBRE O GANESH -->
+    <div class="sobre">
+        <h1>Sobre o <span id="ganesh"></span></h1>
+
+        <div id="sobre"></div> <!-- Agora será preenchido pelo JS -->
+
+        <a href="#"><img src="img/lupa-icon.png" alt="Lupa"> Saiba Mais</a>
+    </div>
+
+    <!-- RODAPÉ DO SITE -->
+    <nav class="rodape">
+        <div class="esquerda">
+            <a href="#"><img class="icon" src="img/icons8-twitter-bird-50.png" alt="Twitter"></a>
+            <a href="#"><img class="icon" src="img/icons8-instagram-64.png" alt="Instagram"></a>
+            <a href="#"><img class="icon" src="img/icons8-facebook-50.png" alt="Facebook"></a>
+            <a href="#"><img class="icon" src="img/icons8-github-50.png" alt="GitHub"></a>
+            <a href="#"><img class="icon" src="img/icons8-youtube-50.png" alt="YouTube"></a>
+        </div>
+
+        <div class="direita">
+            <p>@ 2025 Ganesh</p>
+        </div>
+    </nav>
+
+    <!-- Importando o script com defer -->
+    <script src="src/script.js" defer></script>
+
+</body>
+
+</html>

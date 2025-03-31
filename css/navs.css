@@ -1,0 +1,43 @@
+
+/*CABEÇALHO DO SITE*/
+
+.cabecalho{
+    background-color: #2E2C2F;
+}
+
+
+
+
+
+
+
+/*RODAPE DO SITE*/
+.rodape{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0px;
+}
+
+.rodape .direita{
+    padding-left: 900px;
+}
+
+.rodape.esquerda{
+
+}
+
+.rodape p{
+    color: white;
+}
+
+.rodape .icon{
+    height: 60px;
+    width: 60px;
+    padding: 10px 10px;
+}
+
+.rodape a{
+    
+}

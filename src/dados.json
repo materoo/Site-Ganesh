@@ -1,0 +1,91 @@
+{
+    "informacoes":{
+        "pt-br":{
+            "grupo":"Ganesh",
+            "subtitulo":"Grupo extracurricular focado em segurança da informação",
+            "sobre":[
+                "Ganesh é um grupo extracurricular sediado na USP São Carlos, dedicado ao avanço do conhecimento em Segurança da Informação entre estudantes de graduação e a comunidade em geral. Buscamos essa missão desenvolvendo materiais didáticos, cursos especializados e workshops, além de criar projetos educacionais para escolas públicas e privadas. Organizados em cinco principais áreas de estudo — Criptografia, Engenharia Reversa, Redes, Hardware Hacking e Segurança Web — nossos membros produzem conteúdos educacionais valiosos, tanto de forma independente quanto colaborativa."
+                ,
+                "Nos conectamos com o público por meio de diversas iniciativas de divulgação, incluindo nosso canal no YouTube, um processo seletivo anual e a participação em competições de Capture the Flag (CTF). Nosso desempenho consistente e classificações elevadas nesses torneios nos posicionam entre os melhores times do Brasil e como a principal equipe universitária do país. Cada área de estudo realiza reuniões semanais focadas no desenvolvimento de minicursos, ferramentas e materiais de estudo, com a maioria desses recursos disponíveis publicamente no GitHub. Através desses esforços, contribuímos continuamente para a expansão da área de segurança da informação no Brasil."
+            ]
+        },
+        "en-us":{
+            "grupo:":"Ganesh",
+            "subtitulo":"Extracurricular group focused on information security",
+            "sobre":[
+                "Ganesh is an extracurricular group based at USP São Carlos, dedicated to advancing knowledge in Information Security among undergraduates and the wider community. We pursue this mission by developing classroom materials, specialized courses, and workshops, and by creating educational projects for public and private schools. Organized into five key study areas — Cryptography, Reverse Engineering, Networks, Hardware Hacking, and Web Security — our members produce valuable educational content independently and collaboratively."                ,
+                "We connect with the public through various outreach initiatives, including our YouTube channel, an annual recruitment process, and participation in Capture the Flag (CTF) competitions. Our consistent high rankings in these competitions position us among Brazil’s top teams and the country's leading university team. Each study area holds weekly meetings focused on developing mini-courses, tools, and study materials, with most of these resources publicly accessible on GitHub. Through these efforts, we continually contribute to and expand the field of information security in Brazil."            
+            ]
+        }
+    },
+    "noticias":{
+        "pt-br":[
+            {
+                "titulo":"Ganesh vence a competição de segurança da informação da USP",
+                "descricao":"No evento CodelabHacks da USP ganesh fica em primeiro lugar no evento, mostrando grande habilidade e inovação."
+            },
+            {
+                "titulo":"Ganesh descobre vulnerabilidade crítica em sistema bancário",
+                "descricao":"Durante uma pesquisa independente, Ganesh identificou uma falha crítica em um sistema bancário, ajudando a evitar possíveis ataques cibernéticos."
+            },
+            {
+                "titulo":"Ganesh lança ferramenta de análise de malware",
+                "descricao":"A nova ferramenta desenvolvida por Ganesh permite identificar e neutralizar malwares avançados com maior eficiência."
+            },
+            {
+                "titulo":"Ganesh ministra workshop sobre defesa cibernética",
+                "descricao":"Ganesh liderou um workshop prático sobre estratégias de defesa cibernética, atraindo especialistas e estudantes da área."
+            },
+            {
+                "titulo":"Ganesh publica artigo sobre segurança em IoT",
+                "descricao":"O grupo publicou um artigo inovador sobre vulnerabilidades em dispositivos IoT, propondo soluções práticas para mitigação de riscos."
+            },
+            {
+                "titulo":"Ganesh desenvolve sistema de detecção de intrusão",
+                "descricao":"O novo sistema criado pelo grupo utiliza inteligência artificial para detectar intrusões em redes com alta precisão."
+            },
+            {
+                "titulo":"Ganesh participa de conferência internacional de cibersegurança",
+                "descricao":"Representantes do grupo apresentaram suas pesquisas na conferência CyberSec Global, recebendo elogios da comunidade internacional."
+            },
+            {
+                "titulo":"Ganesh colabora com empresas para melhorar segurança de APIs",
+                "descricao":"O grupo trabalhou em parceria com empresas de tecnologia para identificar e corrigir falhas de segurança em APIs críticas."
+            }
+        ],
+        "en-us":[
+            {
+                "titulo":"Ganesh wins USP's information security competition",
+                "descricao":"At the CodelabHacks event at USP, Ganesh takes first place in the event, demonstrating great skill and innovation."
+            },
+            {
+                "titulo":"Ganesh discovers critical vulnerability in banking system",
+                "descricao":"During independent research, Ganesh identified a critical flaw in a banking system, helping to prevent potential cyberattacks."
+            },
+            {
+                "titulo":"Ganesh launches malware analysis tool",
+                "descricao":"The new tool developed by Ganesh enables the identification and neutralization of advanced malware with greater efficiency."
+            },
+            {
+                "titulo":"Ganesh conducts workshop on cyber defense",
+                "descricao":"Ganesh led a hands-on workshop on cyber defense strategies, attracting experts and students in the field."
+            },
+            {
+                "titulo":"Ganesh publishes article on IoT security",
+                "descricao":"The group published an innovative article on vulnerabilities in IoT devices, proposing practical solutions for risk mitigation."
+            },
+            {
+                "titulo":"Ganesh develops intrusion detection system",
+                "descricao":"The new system created by the group uses artificial intelligence to detect network intrusions with high accuracy."
+            },
+            {
+                "titulo":"Ganesh participates in international cybersecurity conference",
+                "descricao":"Group representatives presented their research at the CyberSec Global conference, receiving praise from the international community."
+            },
+            {
+                "titulo":"Ganesh collaborates with companies to improve API security",
+                "descricao":"The group partnered with tech companies to identify and fix security flaws in critical APIs."
+            }
+        ]
+    }
+}
