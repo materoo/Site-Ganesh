@@ -1,45 +1,187 @@
-
-/*CABEÇALHO DO SITE*/
-
-.cabecalho{
+/* CABEÇALHO DO SITE */
+.cabecalho {
     background-color: #2E2C2F;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0px;
+    padding: 20px 20%;
 }
 
-.cabecalho .direita, .cabecalho .esquerda{
-    padding: 0px 50px;
+.cabecalho img {
+    width: 175px;
+}
+
+.cabecalho .esquerda a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px 3px 15px;
+}
+
+.cabecalho .esquerda .link {
+    position: relative;
+}
+
+.cabecalho .esquerda .link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: green;
+    transition: width 0.4s ease-out;
+}
+
+.cabecalho .esquerda .link:hover::after {
+    width: 100%;
 }
 
 
 
 
+/* BOTÃO IDIOMA */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 160px;
+    text-align: left;
+    padding: 5px 0;
+    z-index: 1;
+}
+
+.dropdown-content button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-content button:hover {
+    background-color: #d6d4d4;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.fade.show {
+    opacity: 1;
+}
 
 
-/*RODAPE DO SITE*/
-.rodape{
+
+
+/* RODAPÉ DO SITE */
+.rodape {
     background-color: black;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
-    padding: 20px 0px;
+    padding: 20px 17%;
+    gap: 50px;
 }
 
-.rodape .direita{
-    padding-left: 900px;
-}
-
-.rodape p{
+.rodape p {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-.rodape .icon{
-    height: 60px;
-    width: 60px;
-    padding: 10px 10px;
+.rodape .icon {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    transition: transform 0.25s ease-in-out;
+}
+
+.rodape .icon:hover {
+    transform: translateY(-10px);
+}
+
+
+
+
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cabecalho .esquerda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecalho img {
+        width: 150px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .rodape .icon {
+        height: 35px;
+        width: 35px;
+    }
+
+    .rodape p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho .esquerda a {
+        padding: 0 10px;
+    }
+
+    .rodape .icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .rodape p {
+        font-size: 12px;
+    }
+
 }
