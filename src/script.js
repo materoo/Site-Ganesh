@@ -34,3 +34,9 @@ document.getElementById('trocarIdioma').addEventListener('click', (event) => {
 });
 
 carregarDados();
+
+
+function toggleMenu(){
+    const menu = document.getElementById('menuHamb');
+    menu.classList.toggle('active');
+}

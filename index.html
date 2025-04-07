@@ -13,12 +13,12 @@
 <body>
 
     <!-- CABEÇALHO DO SITE -->
-    <nav class="cabecalho">
+    <header class="cabecalho">
         <div class="direita">
             <a href="index.html"><img src="img/ganesh-logo-white.svg" alt="Ganesh"></a>
         </div>
 
-        <div class="esquerda">
+        <div class="esquerda" id="menuHamb">
             <a href="noticias.html" class="link">Notícias</a>
             <div class="dropdown">
                 <button class="dropbtn">
@@ -30,7 +30,8 @@
                 </div>
             </div>
         </div>
-    </nav>
+        <div class="hamb" onclick="toggleMenu()"><img src="img/hamb.png" alt="Menu lateral"></div>
+    </header>
 
     <!-- LOGO GANESH COM TEXTO -->
     <div class="logo">
@@ -52,7 +53,7 @@
     </div>
 
     <!-- RODAPÉ DO SITE -->
-    <nav class="rodape">
+    <footer class="rodape">
         <div class="esquerda">
             <a href="#"><img class="icon" src="img/icons8-twitter-bird-50.png" alt="Twitter"></a>
             <a href="#"><img class="icon" src="img/icons8-instagram-64.png" alt="Instagram"></a>
@@ -64,7 +65,7 @@
         <div class="direita">
             <p>@ 2025 Ganesh</p>
         </div>
-    </nav>
+    </footer>
 
     <script src="src/script.js" defer></script>
 
