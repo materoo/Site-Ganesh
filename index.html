@@ -19,9 +19,16 @@
         </div>
 
         <div class="esquerda">
-            <a href="noticias.html">Notícias</a>
-            <a href="#" id="trocarIdioma"><img src="img/lang-icon.png" alt="Idioma"> <span
-                    id="idiomaTexto">en-US</span></a>
+            <a href="noticias.html" class="link">Notícias</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <span id="idioma-selecionado">pt-BR</span>
+                </button>
+                <div class="dropdown-content">
+                    <button onclick="mudarIdioma('pt')">pt-BR</button>
+                    <button onclick="mudarIdioma('en')">en-US</button>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -38,7 +45,8 @@
     <div class="sobre">
         <h1>Sobre o <span id="ganesh"></span></h1>
 
-        <div id="sobre"></div> <!-- Agora será preenchido pelo JS -->
+        <div id="sobre">
+        </div>
 
         <a href="#"><img src="img/lupa-icon.png" alt="Lupa"> Saiba Mais</a>
     </div>
@@ -58,7 +66,6 @@
         </div>
     </nav>
 
-    <!-- Importando o script com defer -->
     <script src="src/script.js" defer></script>
 
 </body>

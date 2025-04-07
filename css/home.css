@@ -1,18 +1,43 @@
-
 /* LOGO GANHESH CENTRO PÁGINA INICIAL */
 
-.logo{
+.logo {
     display: flex;
     justify-content: center;
 }
 
-.logo img{
-    width: 24%;
-    padding: 100px 0px 20px 0px;   
+.logo img {
+    width: 15%;
+    padding: 12.5% 0 20px 0;
 }
 
-#subtitulo{
+#subtitulo {
     font-size: 50px;
     color: white;
+    padding: 0 0 15% 0;
 
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .logo img {
+        width: 30%;
+        padding: 12.5% 0 20px 0;
+    }
+
+    #subtitulo {
+        padding: 0 0 20% 0;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 40%;
+        padding: 45% 0 20px 0;
+    }
+
+    #subtitulo {
+        padding: 0 0 50% 0;
+
+    }
 }
