@@ -8,7 +8,7 @@
     padding: 20px 20%;
 }
 
-.cabecalho img {
+.cabecalho .direita img {
     width: 175px;
 }
 
@@ -35,6 +35,11 @@
 
 .cabecalho .esquerda .link:hover::after {
     width: 100%;
+}
+
+.hamb{
+    display: none;
+    cursor: pointer;
 }
 
 
@@ -112,7 +117,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 20px 17%;
+    padding: 20px 15%;
     gap: 50px;
 }
 
@@ -138,19 +143,9 @@
 
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
 @media (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
 
-    .cabecalho .esquerda {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .cabecalho img {
+    .cabecalho .direita img {
         width: 150px;
     }
 
@@ -171,10 +166,10 @@
 }
 
 @media (max-width: 480px) {
-    .cabecalho .esquerda a {
-        padding: 0 10px;
+    .cabecalho {
+        justify-content: center;
+        gap: 60%;
     }
-
     .rodape .icon {
         height: 30px;
         width: 30px;
@@ -184,4 +179,30 @@
         font-size: 12px;
     }
 
+    .cabecalho .esquerda{
+        display: none;
+        flex-direction: column;
+        background-color: #2E2C2F;
+        padding: 10px;
+    }
+
+    .cabecalho .esquerda .active{
+        display: flex;
+    }
+
+    .hamb{
+        display: block;
+    }
+
 }
+
+    @media (max-width: 375px){
+        .rodape .icon{
+            height: 25px;
+            width: 25px;
+        }
+
+        .rodape{
+            padding: 20px 8%;
+        }
+    }
