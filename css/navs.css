@@ -46,6 +46,11 @@
 
 
 /* BOTÃO IDIOMA */
+#bandeira-idioma {
+    width: 1.6rem;
+}
+
+
 .dropdown {
     position: relative;
     display: inline-block;

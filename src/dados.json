@@ -10,7 +10,7 @@
             ]
         },
         "en-us":{
-            "grupo:":"Ganesh",
+            "grupo":"Ganesh",
             "subtitulo":"Extracurricular group focused on information security",
             "sobre":[
                 "Ganesh is an extracurricular group based at USP São Carlos, dedicated to advancing knowledge in Information Security among undergraduates and the wider community. We pursue this mission by developing classroom materials, specialized courses, and workshops, and by creating educational projects for public and private schools. Organized into five key study areas — Cryptography, Reverse Engineering, Networks, Hardware Hacking, and Web Security — our members produce valuable educational content independently and collaboratively."                ,
