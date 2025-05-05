@@ -1,20 +1,85 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
 /* LOGO GANHESH CENTRO PÁGINA INICIAL */
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    gap: 1rem;
+    margin-bottom: 8rem;
+}
 
 .logo {
     display: flex;
-    justify-content: center;
+    width: 50%;
 }
 
+
 .logo img {
-    width: 15%;
-    padding: 12.5% 0 20px 0;
+    width: 100%;
+}
+
+#grupo {
+    font-size: 3rem;
+    color: white;
 }
 
 #subtitulo {
-    font-size: 50px;
+    font-size: 1.2rem;
     color: white;
-    padding: 0 0 15% 0;
+    text-align: center;
+}
 
+/* SOBRE O GANESH */
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    align-items: start;
+    padding: 1rem;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    gap: 1rem;
+    border-radius: 5px;
+}
+
+#sobre-title {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#ganesh-span {
+    color: green;
+    font-size: 1.5rem;
+}
+
+.sobre-text {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.sobre-button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
