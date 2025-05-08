@@ -1,88 +1,94 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
 /* LOGO GANHESH CENTRO PÁGINA INICIAL */
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    gap: 1rem;
+    margin-bottom: 8rem;
+}
 
 .logo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 50%;
 }
 
+
 .logo img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    padding: 5.5% 0 20px 0;
+    width: 100%;
+}
+
+#grupo {
+    font-size: 3rem;
+    color: white;
 }
 
 #subtitulo {
-    font-size: 50px;
+    font-size: 1.2rem;
     color: white;
-}
-
-#descricao {
-    font-size: 20px;
-    color: white;
-    margin: 1% 0 8% 0;
     text-align: center;
 }
 
+/* SOBRE O GANESH */
 
-
-/* "CAIXA" COM AS INFORMAÇÕES DO GANESH */
 .sobre {
     display: flex;
     flex-direction: column;
+    width: 65%;
+    align-items: start;
+    padding: 1rem;
     justify-content: center;
-    max-width: 1500px;
-    height: auto;
-    margin: 0 auto 3%;
-    background-color: rgb(0, 0, 0, 0.3);
-    padding: 1% 0 1% 0;
-    border-radius: 10px;
-}
-
-.teste {
-    background-color: pink;
-    height: 100px;
-    width: 100px;
-}
-
-.sobre h1,
-div {
-    padding: 10px 10px 10px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    gap: 1rem;
+    border-radius: 5px;
     color: white;
 }
 
-.sobre a {
-    display: flex;
-    height: 50px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+#sobre-title {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#ganesh-span {
+    color: green;
+    font-size: 1.5rem;
+}
+
+.sobre-text {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.sobre-button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid white;
     text-decoration: none;
-    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* ESTILIZANDO O BOTÃO "SAIBA MAIS" */
-.saiba {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-    margin: 10px;
-    width: 13%;
-    border: 2px solid rgb(100, 100, 100);
-    background-color: transparent;
-    border-radius: 5px;
-    transition: all 0.2s ease;
-    overflow: hidden;
-}
 
 
 
 /* "LINHA" QUE PASSA PELO BOTÂO */
-.saiba::before {
+.sobre-button::before {
     content: " ";
     position: absolute;
     top: 0px;
@@ -92,18 +98,28 @@ div {
     background-color: #0f0;
     opacity: 0;
     box-shadow: 0 0 10px rgba(0, 230, 0, 0.8);
+
 }
 
-.saiba:hover::before {
+.sobre-button:hover::before {
     animation: laser 1.2s linear infinite alternate;
     opacity: 0.9;
     border: 2px solid #0f0;
-    transform: scale(1.05);
+    transform: scale(1.02);
+
 }
 
-.saiba:hover {
+.sobre-button:hover {
+    color: #0f0;
     border: 2px solid #0f0;
-    transform: scale(1.05);
+    transform: scale(1.02);
+    overflow: hidden;
+
+
+}
+
+.destaque {
+    color: red;
 }
 
 @keyframes laser {
@@ -117,9 +133,6 @@ div {
 }
 
 
-
-
-
 /* CAIXA COM OS PATROCÍNIOS */
 
 .patrocinio {
@@ -129,13 +142,16 @@ div {
     text-align: center;
     justify-content: center;
     align-items: center;
+    color: white;
+    margin-bottom: 20px;
 }
 
 .box-patrocinio {
     font-weight: bold;
     height: auto;
     width: auto;
-    background-color: rgb(0, 0, 0, 0.3);
+    padding: 10px 20px 20px 20px;
+    background-color: rgb(0, 0, 0, 0.5);
     border-radius: 5px;
 }
 
@@ -143,6 +159,8 @@ div {
     display: flex;
     align-items: center;
 }
+
+
 
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
 @media (max-width: 768px) {
@@ -155,14 +173,6 @@ div {
         padding: 0 0 20% 0;
 
     }
-
-    .sobre {
-        width: 70%;
-    }
-
-    .saiba {
-        width: 90%;
-    }
 }
 
 @media (max-width: 480px) {
@@ -173,22 +183,6 @@ div {
 
     #subtitulo {
         padding: 0 0 50% 0;
-    }
 
-    .sobre {
-        width: 90%;
-    }
-
-    .saiba {
-        width: 90%;
-    }
-
-    .patrocinio {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .patrocinio img {
-        width: 50%;
     }
 }

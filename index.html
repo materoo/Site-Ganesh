@@ -2,127 +2,128 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganesh</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/navs.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/background.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganesh</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/navs.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/background.css">
 </head>
 
 <body>
 
-
-    <div class="container">
-        <div class="bubbles" id="bubbles">
-
-        </div>
+  <!-- CABEÇALHO DO SITE -->
+  <header class="cabecalho">
+    <div class="direita">
+      <a href="index.html"><img src="img/ganesh-logo-white.svg" alt="Ganesh" /></a>
     </div>
 
-
-    <!-- CABEÇALHO DO SITE -->
-    <nav class="cabecalho">
-        <div class="direita">
-            <a href="index.html"><img src="img/ganesh-logo-white.svg" alt="Ganesh"></a>
+    <div class="esquerda" id="menuHamb">
+      <a href="noticias.html" class="link">Notícias</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <img src="" alt="Bandeira" id="bandeira-idioma">
+          <span id="idioma-selecionado"></span>
+        </button>
+        <div class="dropdown-content">
+          <button onclick="changeLanguage('pt-br')">pt-BR</button>
+          <button onclick="changeLanguage('en-us')">en-US</button>
         </div>
+      </div>
+    </div>
+    <div class="hamb" onclick="toggleMenu()">
+      <img src="img/hamb.png" alt="Menu lateral" />
+    </div>
+  </header>
 
-        <div class="esquerda">
-            <a href="noticias.html" class="link">Notícias</a>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <span id="idioma-selecionado">pt-BR</span>
-                </button>
-                <div class="dropdown-content">
-                    <button onclick="mudarIdioma('pt')">pt-BR</button>
-                    <button onclick="mudarIdioma('en')">en-US</button>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- LOGO GANESH COM TEXTO -->
-    <div class="logo">
-        <img src="img/GaneshLogo.png" alt="Logo Ganesh" width="250px">
-        <h2 class="logo" id="subtitulo">GANESH</h2>
-        <h4 class="logo" id="descricao">Grupo extracurricular focado em <br>segurança da informação</h4>
+  <!--BACKGROUND-->
+  <!--APENAS UMA IDEIA DE COMO PODE SER A PARTE DO FUNDO DA PÁGINA-->
+  <div class="container">
+    <div class="numbers" id="numbers">
+    </div>
+  </div>
+
+  <!-- LOGO GANESH COM TEXTO -->
+  <div class="wrapper">
+    <div class="center-content">
+      <div class="logo">
+        <img src="img/GaneshLogo.png" alt="Logo Ganesh" />
+      </div>
+      <h2 id="grupo">GANESH</h2>
+      <h6 id="subtitulo">
+        Grupo extracurricular focado em segurança da informação
+      </h6>
     </div>
 
     <!-- SOBRE O GANESH -->
-    <div class="sobre">
-        <h1>Sobre o <span id="ganesh">Ganesh</span></h1>
-        <div><span style="color: #0f0;">Ganesh</span> é um grupo extracurricular sediado na USP São Carlos,
-            dedicado ao avanço do conhecimento em <span style="color: #0f0;">Segurança da Informação</span> entre
-            estudantes de graduação e a comunidade em geral.
-            Buscamos essa missão desenvolvendo materiais didáticos, cursos especializados e workshops, além de criar
-            projetos educacionais para escolas públicas e privadas.
-            Organizados em cinco principais áreas de estudo — <span style="color: #0f0">Criptografia</span>,<span
-                style="color: #0f0"> Engenharia Reversa</span>,<span style="color: #0f0"> Redes</span>,<span
-                style="color: #0f0"> Hardware Hacking</span> e<span style="color: #0f0"> Segurança Web</span>
-            — nossos membros produzem conteúdos educacionais valiosos, tanto de forma independente quanto colaborativa.
-        </div>
-        <div>Nos conectamos com o público por meio de diversas iniciativas de divulgação, incluindo nosso canal no
-            YouTube, um processo seletivo anual
-            e a participação em competições de<span style="color: #0f0;"> Capture the Flag (CTF)</span>. Nosso
-            desempenho consistente e classificações elevadas nesses torneios nos posicionam entre os melhores
-            times do Brasil e como a principal equipe universitária do país. Cada área de estudo realiza reuniões
-            semanais focadas no desenvolvimento de minicursos, ferramentas e materiais de estudo,
-            com a maioria desses recursos disponíveis publicamente no GitHub. Através desses esforços, contribuímos
-            continuamente para a expansão da área de segurança da informação no Brasil.</div>
-        <button class="saiba"><a href="#"><img src="img/lupa-icon.png" alt="Lupa" height="30px" width="30px">
-                <p>Saiba Mais</p>
-            </a>
-        </button>
+    <div id="sobre" class="sobre"></div>
+  </div>
+
+  <!-- PARTE DOS PATROCINIOS -->
+
+  <div class="patrocinio">
+    <div class="box-patrocinio">
+      <h2>Patrocinadores</h2>
+      <div class="lado-a-lado-patrocinio">
+        <img src="img/BugHunt-Patrocinio.png" alt="Logo da BugHunt" width="300px" height="85px">
+        <img src="img/tractian-patrocinio.svg" alt="Logo da Tractian" width="255px" height="35px">
+      </div>
     </div>
 
-    <!-- PARTE DOS PATROCINIOS -->
+  </div>
 
-    <div class="patrocinio">
-        <div class="box-patrocinio">
-            <h2>Patrocinadores</h2>
-            <div class="lado-a-lado-patrocinio">
-                <img src="img/BugHunt-Patrocinio.png" alt="Logo da BugHunt" width="255px" height="75px">
-                <img src="img/tractian-patrocinio.svg" alt="Logo da Tractian" width="255px" height="35px">
-            </div>
-        </div>
-
+  <!-- RODAPÉ DO SITE -->
+  <footer class="rodape">
+    <div class="esquerda">
+      <a href="#"><img class="icon" src="img/icons8-twitter-bird-50.png" alt="Twitter" /></a>
+      <a href="#"><img class="icon" src="img/icons8-instagram-64.png" alt="Instagram" /></a>
+      <a href="#"><img class="icon" src="img/icons8-facebook-50.png" alt="Facebook" /></a>
+      <a href="#"><img class="icon" src="img/icons8-github-50.png" alt="GitHub" /></a>
+      <a href="#"><img class="icon" src="img/icons8-youtube-50.png" alt="YouTube" /></a>
     </div>
 
-    <!-- RODAPÉ DO SITE -->
-    <nav class="rodape">
-        <div class="esquerda">
-            <a href="#"><img class="icon" src="img/icons8-twitter-bird-50.png" alt="Twitter"></a>
-            <a href="#"><img class="icon" src="img/icons8-instagram-64.png" alt="Instagram"></a>
-            <a href="#"><img class="icon" src="img/icons8-facebook-50.png" alt="Facebook"></a>
-            <a href="#"><img class="icon" src="img/icons8-github-50.png" alt="GitHub"></a>
-            <a href="#"><img class="icon" src="img/icons8-youtube-50.png" alt="YouTube"></a>
-        </div>
+    <div class="direita">
+      <p>&copy 2025 Ganesh</p>
+    </div>
+  </footer>
 
-        <div class="direita">
-            <p>@ 2025 Ganesh</p>
-        </div>
-    </nav>
+  <script>
+    //TENTATIVA DE CRIAR AS LINHAS E COLUNAS COM 0s e 1s para o background
+    const numbers = document.getElementById('numbers');
+    const columnCount = Math.floor(window.innerWidth / 20);
+    const rowCount = Math.floor(window.innerHeight / 20);
 
-    <script src="src/script.js" defer></script>
-    <script>
-        const container = document.querySelector('.bubbles');
-        const bubbleSpacing = 10 + 8;
-        const count = Math.ceil(window.innerWidth / bubbleSpacing);
+    function getRandomChar() {
+      return Math.random() > 0.5 ? '1' : '0';
+    }
 
-        for (let i = 0; i < count; i++) {
-            const span = document.createElement('span');
-            if (Math.random() < 0.5) {
-                span.textContent = '0';
-            } else {
-                span.textContent = '1';
-            }
-            // varia aleatoriamente entre 10 e 30 segundos de duração
-            const randomI = Math.floor(Math.random() * 40) + 10; // CRIA UMA BOLHA
-            span.style.setProperty('--i', randomI);
-            container.appendChild(span);
-        }
-    </script>
+    for (let i = 0; i < columnCount; i++) {
+      const column = document.createElement('div');
+      column.classList.add('column');
+      column.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      column.style.animationDelay = `${Math.random() * 5}s`;
 
+      for (let j = 0; j < rowCount; j++) {
+        const char = document.createElement('span');
+        char.classList.add('char');
+        char.textContent = getRandomChar();
+        column.appendChild(char);
+      }
+
+      numbers.appendChild(column);
+    }
+
+    setInterval(() => {
+      document.querySelectorAll('.char').forEach(char => {
+        char.textContent = getRandomChar();
+      });
+    }, 10000); // valor bem alto pra teste e não travar a pagina
+
+  </script>
+
+  <script src="src/script.js" defer></script>
 </body>
 
 </html>

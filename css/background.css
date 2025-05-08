@@ -8,50 +8,46 @@ body {
     min-height: 100vh;
 }
 
-.container {
+.numbers {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1
-}
-
-.bubbles {
-    position: relative;
     display: flex;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
 }
 
-.bubbles span {
+.numbers span {
     position: relative;
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
-    color: green;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    color: limegreen;
     font-weight: bold;
     font-size: 20px;
-    border-radius: 50%;
+    font-family: monospace;
     animation: animate 15s linear infinite;
-    animation-duration: calc(300s / var(--i));
-}
-
-.bubbles span:nth-child(even) {
-    color: green;
+    animation-duration: calc(200s / var(--i));
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes animate {
     0% {
-        transform: translateY(-10vh) scale(1);
+        transform: translateY(-100vh);
         opacity: 1;
     }
 
     50% {
-        opacity: 0.2;
+        opacity: 0.5;
     }
 
     100% {
-        transform: translateY(100vh) scale(1);
-        opacity: 0.8;
+        transform: translateY(10vh);
+        opacity: 0;
     }
 }
