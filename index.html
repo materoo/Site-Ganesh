@@ -1,129 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ganesh</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/navs.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ganesh</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/navs.css" />
-  <link rel="stylesheet" href="css/home.css" />
-  <link rel="stylesheet" href="css/background.css">
-</head>
+  <body>
+    <!-- CABEÇALHO DO SITE -->
+    <header class="cabecalho">
+      <div class="direita">
+        <a href="index.html"
+          ><img src="img/ganesh-logo-white.svg" alt="Ganesh"
+        /></a>
+      </div>
 
-<body>
-
-  <!-- CABEÇALHO DO SITE -->
-  <header class="cabecalho">
-    <div class="direita">
-      <a href="index.html"><img src="img/ganesh-logo-white.svg" alt="Ganesh" /></a>
-    </div>
-
-    <div class="esquerda" id="menuHamb">
-      <a href="noticias.html" class="link">Notícias</a>
-      <div class="dropdown">
-        <button class="dropbtn">
-          <img src="" alt="Bandeira" id="bandeira-idioma">
-          <span id="idioma-selecionado"></span>
-        </button>
-        <div class="dropdown-content">
-          <button onclick="changeLanguage('pt-br')">pt-BR</button>
-          <button onclick="changeLanguage('en-us')">en-US</button>
+      <div class="esquerda" id="menuHamb">
+        <a href="noticias.html" class="link">Notícias</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <img src="" alt="Bandeira" id="bandeira-idioma">
+            <span id="idioma-selecionado"></span>
+          </button>
+          <div class="dropdown-content">
+            <button onclick="changeLanguage('pt-br')">pt-BR</button>
+            <button onclick="changeLanguage('en-us')">en-US</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hamb" onclick="toggleMenu()">
-      <img src="img/hamb.png" alt="Menu lateral" />
-    </div>
-  </header>
-
-
-  <!--BACKGROUND-->
-  <!--APENAS UMA IDEIA DE COMO PODE SER A PARTE DO FUNDO DA PÁGINA-->
-  <div class="container">
-    <div class="numbers" id="numbers">
-    </div>
-  </div>
-
-  <!-- LOGO GANESH COM TEXTO -->
-  <div class="wrapper">
-    <div class="center-content">
-      <div class="logo">
-        <img src="img/GaneshLogo.png" alt="Logo Ganesh" />
+      <div class="hamb" onclick="toggleMenu()">
+        <img src="img/hamb.png" alt="Menu lateral" />
       </div>
-      <h2 id="grupo">GANESH</h2>
-      <h6 id="subtitulo">
-        Grupo extracurricular focado em segurança da informação
-      </h6>
-    </div>
+    </header>
 
-    <!-- SOBRE O GANESH -->
-    <div id="sobre" class="sobre"></div>
-  </div>
-
-  <!-- PARTE DOS PATROCINIOS -->
-
-  <div class="patrocinio">
-    <div class="box-patrocinio">
-      <h2>Patrocinadores</h2>
-      <div class="lado-a-lado-patrocinio">
-        <img src="img/BugHunt-Patrocinio.png" alt="Logo da BugHunt" width="300px" height="85px">
-        <img src="img/tractian-patrocinio.svg" alt="Logo da Tractian" width="255px" height="35px">
+    <!-- LOGO GANESH COM TEXTO -->
+    <div class="wrapper">
+      <div class="center-content">
+        <div class="logo">
+          <img src="img/GaneshLogo.png" alt="Logo Ganesh" />
+        </div>
+        <h2 id="grupo">GANESH</h2>
+        <h6 id="subtitulo">
+          Grupo extracurricular focado em segurança da informação
+        </h6>
       </div>
+
+      <!-- SOBRE O GANESH -->
+      <div id="sobre" class="sobre"></div>
     </div>
 
-  </div>
+    <!-- RODAPÉ DO SITE -->
+    <footer class="rodape">
+      <div class="esquerda">
+        <a href="#"
+          ><img class="icon" src="img/icons8-twitter-bird-50.png" alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img class="icon" src="img/icons8-instagram-64.png" alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img class="icon" src="img/icons8-facebook-50.png" alt="Facebook"
+        /></a>
+        <a href="#"
+          ><img class="icon" src="img/icons8-github-50.png" alt="GitHub"
+        /></a>
+        <a href="#"
+          ><img class="icon" src="img/icons8-youtube-50.png" alt="YouTube"
+        /></a>
+      </div>
 
-  <!-- RODAPÉ DO SITE -->
-  <footer class="rodape">
-    <div class="esquerda">
-      <a href="#"><img class="icon" src="img/icons8-twitter-bird-50.png" alt="Twitter" /></a>
-      <a href="#"><img class="icon" src="img/icons8-instagram-64.png" alt="Instagram" /></a>
-      <a href="#"><img class="icon" src="img/icons8-facebook-50.png" alt="Facebook" /></a>
-      <a href="#"><img class="icon" src="img/icons8-github-50.png" alt="GitHub" /></a>
-      <a href="#"><img class="icon" src="img/icons8-youtube-50.png" alt="YouTube" /></a>
-    </div>
+      <div class="direita">
+        <p>@ 2025 Ganesh</p>
+      </div>
+    </footer>
 
-    <div class="direita">
-      <p>&copy 2025 Ganesh</p>
-    </div>
-  </footer>
-
-  <script>
-    //TENTATIVA DE CRIAR AS LINHAS E COLUNAS COM 0s e 1s para o background
-    const numbers = document.getElementById('numbers');
-    const columnCount = Math.floor(window.innerWidth / 20);
-    const rowCount = Math.floor(window.innerHeight / 20);
-
-    function getRandomChar() {
-      return Math.random() > 0.5 ? '1' : '0';
-    }
-
-    for (let i = 0; i < columnCount; i++) {
-      const column = document.createElement('div');
-      column.classList.add('column');
-      column.style.animationDuration = `${Math.random() * 5 + 5}s`;
-      column.style.animationDelay = `${Math.random() * 5}s`;
-
-      for (let j = 0; j < rowCount; j++) {
-        const char = document.createElement('span');
-        char.classList.add('char');
-        char.textContent = getRandomChar();
-        column.appendChild(char);
-      }
-
-      numbers.appendChild(column);
-    }
-
-    setInterval(() => {
-      document.querySelectorAll('.char').forEach(char => {
-        char.textContent = getRandomChar();
-      });
-    }, 10000); // valor bem alto pra teste e não travar a pagina
-
-  </script>
-
-  <script src="src/script.js" defer></script>
-</body>
-
+    <script src="src/script.js" defer></script>
+  </body>
 </html>

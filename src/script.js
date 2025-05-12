@@ -31,8 +31,8 @@ const createLearnMoreButton = (div, idioma) => {
   path.setAttribute(
     "d",
     "M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 " +
-    "1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 " +
-    "5.5 0 0 1 11 0"
+      "1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 " +
+      "5.5 0 0 1 11 0"
   );
 
   svg.appendChild(path);
@@ -59,7 +59,6 @@ async function carregarDados(idiomaAtual) {
     const sobreDiv = document.getElementById("sobre");
     sobreDiv.innerHTML = "";
 
-
     createSobreTitle(sobreDiv, idiomaAtual);
 
     dados.informacoes[idiomaAtual].sobre.forEach((paragrafo) => {
@@ -77,8 +76,9 @@ async function carregarDados(idiomaAtual) {
 const changeLanguage = (newLanguage) => {
   document.getElementById("idioma-selecionado").textContent =
     newLanguage === "en-us" ? "en-US" : "pt-BR";
-  document.querySelector("#bandeira-idioma").src = `img/${newLanguage === "en-us" ? "US.svg" : "BR.svg"
-    }`;
+  document.querySelector("#bandeira-idioma").src = `img/${
+    newLanguage === "en-us" ? "US.svg" : "BR.svg"
+  }`;
   localStorage.setItem("idiomaSelecionado", newLanguage);
   carregarDados(newLanguage === "en-us" ? "en-us" : "pt-br");
 };
@@ -87,8 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const idiomaSalvo = localStorage.getItem("idiomaSelecionado") || "pt-BR";
   document.querySelector("#idioma-selecionado").textContent =
     idiomaSalvo === "en-us" ? "en-US" : "pt-BR";
-  document.querySelector("#bandeira-idioma").src = `img/${idiomaSalvo === "en-us" ? "US.svg" : "BR.svg"
-    }`;
+  document.querySelector("#bandeira-idioma").src = `img/${
+    idiomaSalvo === "en-us" ? "US.svg" : "BR.svg"
+  }`;
 
   carregarDados(idiomaSalvo === "en-us" ? "en-us" : "pt-br");
 });
