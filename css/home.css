@@ -62,7 +62,7 @@
 
 #ganesh-span {
     color: green;
-    font-size: 1.5rem;
+     font-size: 1.5rem;
 }
 
 .sobre-text {
@@ -128,6 +128,7 @@
         top: 180%;
     }
 }
+
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
 @media (max-width: 768px) {
     .logo img {
