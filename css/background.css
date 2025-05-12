@@ -39,11 +39,11 @@ body {
 @keyframes animate {
     0% {
         transform: translateY(-100vh);
-        opacity: 1;
+        opacity: 0.4;
     }
 
     50% {
-        opacity: 0.5;
+        opacity: 0.4;
     }
 
     100% {

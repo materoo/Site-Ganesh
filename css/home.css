@@ -71,6 +71,8 @@
     font-weight: 300;
 }
 
+
+/* ESTILIZANDO O BOTÃO "SAIBA MAIS" */
 .sobre-button {
     color: white;
     background-color: rgba(0, 0, 0, 0);
@@ -82,10 +84,6 @@
     align-items: center;
     gap: 0.5rem;
 }
-
-/* ESTILIZANDO O BOTÃO "SAIBA MAIS" */
-
-
 
 /* "LINHA" QUE PASSA PELO BOTÂO */
 .sobre-button::before {
@@ -98,47 +96,6 @@
     background-color: #0f0;
     opacity: 0;
     box-shadow: 0 0 10px rgba(0, 230, 0, 0.8);
-
-/* SOBRE O GANESH */
-
-.sobre {
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-    align-items: start;
-    padding: 1rem;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    gap: 1rem;
-    border-radius: 5px;
-}
-
-#sobre-title {
-    color: white;
-    font-size: 1.5rem;
-}
-
-#ganesh-span {
-    color: green;
-    font-size: 1.5rem;
-}
-
-.sobre-text {
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 300;
-}
-
-.sobre-button {
-    color: white;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 1rem;
-    border-radius: 5px;
-    border: 1px solid white;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
 }
 
 .sobre-button:hover::before {
@@ -171,37 +128,6 @@
         top: 180%;
     }
 }
-
-
-/* CAIXA COM OS PATROCÍNIOS */
-
-.patrocinio {
-    display: flex;
-    height: auto;
-    width: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.box-patrocinio {
-    font-weight: bold;
-    height: auto;
-    width: auto;
-    padding: 10px 20px 20px 20px;
-    background-color: rgb(0, 0, 0, 0.5);
-    border-radius: 5px;
-}
-
-.lado-a-lado-patrocinio {
-    display: flex;
-    align-items: center;
-}
-
-
-
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
 @media (max-width: 768px) {
     .logo img {
