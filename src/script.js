@@ -1,3 +1,35 @@
+//TENTATIVA DE CRIAR AS LINHAS E COLUNAS COM 0s e 1s para o background
+const numbers = document.getElementById('numbers');
+const columnCount = Math.floor(window.innerWidth / 20);
+const rowCount = Math.floor(window.innerHeight / 10);
+
+function getRandomChar() {
+  return Math.random() > 0.5 ? '1' : '0';
+}
+
+for (let i = 0; i < columnCount; i++) {
+  const column = document.createElement('div');
+  column.classList.add('column');
+  column.style.animationDuration = `${Math.random() * 5 + 5}s`;
+  column.style.animationDelay = `${Math.random() * 5}s`;
+
+  for (let j = 0; j < rowCount; j++) {
+    const char = document.createElement('span');
+    char.classList.add('char');
+    char.textContent = getRandomChar();
+    column.appendChild(char);
+  }
+
+  numbers.appendChild(column);
+}
+
+setInterval(() => {
+  document.querySelectorAll('.char').forEach(char => {
+    char.textContent = getRandomChar();
+  });
+}, 80000); // valor bem alto pra teste e não travar a pagina
+
+
 const createSobreTitle = (div, idioma) => {
   const h1 = document.createElement("h1");
   h1.id = "sobre-title";
@@ -31,8 +63,8 @@ const createLearnMoreButton = (div, idioma) => {
   path.setAttribute(
     "d",
     "M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 " +
-      "1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 " +
-      "5.5 0 0 1 11 0"
+    "1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 " +
+    "5.5 0 0 1 11 0"
   );
 
   svg.appendChild(path);
@@ -76,9 +108,8 @@ async function carregarDados(idiomaAtual) {
 const changeLanguage = (newLanguage) => {
   document.getElementById("idioma-selecionado").textContent =
     newLanguage === "en-us" ? "en-US" : "pt-BR";
-  document.querySelector("#bandeira-idioma").src = `img/${
-    newLanguage === "en-us" ? "US.svg" : "BR.svg"
-  }`;
+  document.querySelector("#bandeira-idioma").src = `img/${newLanguage === "en-us" ? "US.svg" : "BR.svg"
+    }`;
   localStorage.setItem("idiomaSelecionado", newLanguage);
   carregarDados(newLanguage === "en-us" ? "en-us" : "pt-br");
 };
@@ -87,9 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const idiomaSalvo = localStorage.getItem("idiomaSelecionado") || "pt-BR";
   document.querySelector("#idioma-selecionado").textContent =
     idiomaSalvo === "en-us" ? "en-US" : "pt-BR";
-  document.querySelector("#bandeira-idioma").src = `img/${
-    idiomaSalvo === "en-us" ? "US.svg" : "BR.svg"
-  }`;
+  document.querySelector("#bandeira-idioma").src = `img/${idiomaSalvo === "en-us" ? "US.svg" : "BR.svg"
+    }`;
 
   carregarDados(idiomaSalvo === "en-us" ? "en-us" : "pt-br");
 });
@@ -98,3 +128,4 @@ function toggleMenu() {
   const menu = document.getElementById("menuHamb");
   menu.classList.toggle("active");
 }
+
