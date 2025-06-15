@@ -27,7 +27,7 @@ setInterval(() => {
   document.querySelectorAll('.char').forEach(char => {
     char.textContent = getRandomChar();
   });
-}, 80000); // valor bem alto pra teste e não travar a pagina
+}, 8000); // valor bem alto pra teste e não travar a pagina
 
 
 const createSobreTitle = (div, idioma) => {
@@ -108,12 +108,12 @@ async function carregarDados(idiomaAtual) {
 const changeLanguage = (newLanguage) => {
   document.getElementById("idioma-selecionado").textContent =
     newLanguage === "en-us" ? "en-US" : "pt-BR";
-  document.querySelector("#bandeira-idioma").src = `img/${newLanguage === "en-us" ? "US.svg" : "BR.svg"
-    }`;
+  document.querySelector("#bandeira-idioma").src = `img/${newLanguage === "en-us" ? "US.svg" : "BR.svg"}`;
   localStorage.setItem("idiomaSelecionado", newLanguage);
-  carregarDados(newLanguage === "en-us" ? "en-us" : "pt-br");
-};
 
+  carregarDados(newLanguage);
+  carregarNoticias(newLanguage); // ✅ ESSA LINHA
+};
 document.addEventListener("DOMContentLoaded", () => {
   const idiomaSalvo = localStorage.getItem("idiomaSelecionado") || "pt-BR";
   document.querySelector("#idioma-selecionado").textContent =
@@ -129,3 +129,89 @@ function toggleMenu() {
   menu.classList.toggle("active");
 }
 
+
+// ADICIONANDO LOGICA DA PAGINA DE NOTICIAS
+let paginaAtual = 1;
+const noticiasPorPagina = 5;
+
+const carregarNoticias = async (idioma) => {
+  try {
+    idioma = idioma === "en-us" ? "en-us" : "pt-br";
+    const response = await fetch("/src/dados.json");
+    const dados = await response.json();
+
+    const noticias = dados.noticias[idioma];
+    const noticiasDiv = document.getElementById("noticias");
+    noticiasDiv.innerHTML = ""; 
+
+    const inicio = (paginaAtual - 1) * noticiasPorPagina;
+    const fim = inicio + noticiasPorPagina;
+    const noticiasPagina = noticias.slice(inicio, fim);
+
+    noticiasPagina.forEach((noticia) => {
+      const container = document.createElement("div");
+      container.className = "noticia";
+
+      const titulo = document.createElement("h2");
+      titulo.textContent = noticia.titulo;
+
+      const descricao = document.createElement("p");
+      descricao.textContent = noticia.descricao;
+
+      container.appendChild(titulo);
+      container.appendChild(descricao);
+      noticiasDiv.appendChild(container);
+    });
+
+    const verMaisBtn = document.getElementById("ver-mais");
+    const voltarBtn = document.getElementById("voltar");
+    const paginaIndicador = document.getElementById("pagina");
+const totalPaginas = Math.ceil(noticias.length / noticiasPorPagina);
+paginaIndicador.textContent = `${paginaAtual}`;
+
+    verMaisBtn.style.display = "inline-block";
+voltarBtn.style.display = "inline-block";
+
+
+// Habilita ou desabilita o botão "Ver Mais"
+if (fim < noticias.length) {
+  verMaisBtn.disabled = false;
+  verMaisBtn.classList.remove("botao-desabilitado");
+  verMaisBtn.onclick = () => {
+    paginaAtual++;
+    carregarNoticias(idioma);
+  };
+} else {
+  verMaisBtn.disabled = true;
+  verMaisBtn.classList.add("botao-desabilitado");
+  verMaisBtn.onclick = null;
+}
+
+// Habilita ou desabilita o botão "Voltar"
+if (paginaAtual > 1) {
+  voltarBtn.disabled = false;
+  voltarBtn.classList.remove("botao-desabilitado");
+  voltarBtn.onclick = () => {
+    paginaAtual--;
+    carregarNoticias(idioma);
+  };
+} else {
+  voltarBtn.disabled = true;
+  voltarBtn.classList.add("botao-desabilitado");
+  voltarBtn.onclick = null;
+}
+  } catch (error) {
+    console.error("Erro ao carregar notícias", error);
+  }
+};
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const idiomaSalvo = localStorage.getItem("idiomaSelecionado") || "pt-BR";
+  document.querySelector("#idioma-selecionado").textContent =
+    idiomaSalvo === "en-us" ? "en-US" : "pt-BR";
+  document.querySelector("#bandeira-idioma").src = `img/${idiomaSalvo === "en-us" ? "US.svg" : "BR.svg"}`;
+
+  carregarDados(idiomaSalvo);
+  carregarNoticias(idiomaSalvo);
+});

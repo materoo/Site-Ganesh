@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/GaneshLogo.png" type="image/png">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/main.css" />
+     <link rel="stylesheet" href="css/noticias.css" />
+     <link rel="stylesheet" href="css/navs.css">
+</head>
+<body>
+    <!-- CABEÇALHO DO SITE -->
+  <header class="cabecalho">
+    <div class="direita">
+      <a href="index.html"><img src="img/ganesh-logo-white.svg" alt="Ganesh" /></a>
+    </div>
+
+    <div class="esquerda" id="menuHamb">
+      <a href="noticias.html" class="link">Notícias</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <img src="" alt="Bandeira" id="bandeira-idioma">
+          <span id="idioma-selecionado"></span>
+        </button>
+        <div class="dropdown-content">
+          <button onclick="changeLanguage('pt-br')">pt-BR</button>
+          <button onclick="changeLanguage('en-us')">en-US</button>
+        </div>
+      </div>
+    </div>
+    <div class="hamb" onclick="toggleMenu()">
+      <img src="img/hamb.png" alt="Menu lateral" />
+    </div>
+  </header>
+
+  <!--BACKGROUND-->
+  <div class="container">
+    <div class="numbers" id="numbers">
+    </div>
+  </div>
+
+  <!--CONTEUDO DA PAGINA-->
+
+ <div class="centro">
+    <div class="box-noticias">
+      <h1>Notícias</h1>
+      <div id="noticias" class="notice"></div>
+      <div id="paginacao" class="paginacao"></div>
+      <div class="centro-a">
+        <button class="botao" id="voltar" style="display:none; margin-top: 20px;">  ←  </button>
+          <button class="botao teste" id="pagina"></button>  
+        <button class="botao" id="ver-mais" style="display:none; margin-top: 20px;"> →</button>
+       </div>
+    </div>
+   
+  </div>
+
+   <!-- RODAPÉ DO SITE -->
+  <footer class="rodape">
+    <div class="esquerda">
+      <a href="#"><img class="icon" src="img/icons8-twitter-bird-50.png" alt="Twitter" /></a>
+      <a href="#"><img class="icon" src="img/icons8-instagram-64.png" alt="Instagram" /></a>
+      <a href="#"><img class="icon" src="img/icons8-facebook-50.png" alt="Facebook" /></a>
+      <a href="#"><img class="icon" src="img/icons8-github-50.png" alt="GitHub" /></a>
+      <a href="#"><img class="icon" src="img/icons8-youtube-50.png" alt="YouTube" /></a>
+    </div>
+
+    <div class="direita">
+      <p>@ 2025 Ganesh</p>
+    </div>
+  </footer>
+
+
+  <script src="src/script.js"></script>
+</body>
+</html>
