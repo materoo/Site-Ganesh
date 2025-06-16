@@ -27,7 +27,7 @@ setInterval(() => {
   document.querySelectorAll('.char').forEach(char => {
     char.textContent = getRandomChar();
   });
-}, 8000); // valor bem alto pra teste e não travar a pagina
+}, 200); //tick da animação do background
 
 
 const createSobreTitle = (div, idioma) => {
