@@ -1,4 +1,8 @@
-/* CABEÇALHO DO SITE */
+/* ==========================================================================
+   NAVEGAÇÃO (CABEÇALHO E RODAPÉ)
+   ========================================================================== */
+
+/* --- CABEÇALHO DO SITE --- */
 .cabecalho {
     background-color: #2E2C2F;
     display: flex;
@@ -6,10 +10,19 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 20%;
+    position: relative;
+    /* Essencial para o menu responsivo */
+    z-index: 1000;
 }
 
 .cabecalho .direita img {
     width: 175px;
+    display: block;
+}
+
+.cabecalho .esquerda {
+    display: flex;
+    align-items: center;
 }
 
 .cabecalho .esquerda a {
@@ -39,17 +52,18 @@
 
 .hamb {
     display: none;
+    /* Escondido por padrão em telas grandes */
     cursor: pointer;
 }
 
+.hamb img {
+    width: 35px;
+}
 
-
-
-/* BOTÃO IDIOMA */
+/* --- BOTÃO DE IDIOMA --- */
 #bandeira-idioma {
     width: 1.6rem;
 }
-
 
 .dropdown {
     position: relative;
@@ -93,6 +107,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #333;
 }
 
 .dropdown-content button:hover {
@@ -103,19 +118,7 @@
     display: block;
 }
 
-.fade {
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.fade.show {
-    opacity: 1;
-}
-
-
-
-
-/* RODAPÉ DO SITE */
+/* --- RODAPÉ DO SITE --- */
 .rodape {
     background-color: black;
     display: flex;
@@ -143,18 +146,14 @@
 }
 
 
-@media (min-width: 769px) {
-    #botaoIdiomaMobile {
-        display: none;
-    }
-}
+/* ==========================================================================
+   MEDIA QUERIES DE NAVEGAÇÃO
+   ========================================================================== */
 
-
-/* MEDIA QUERIES PARA RESPONSIVIDADE */
+/* --- TABLETS E CELULARES GRANDES --- */
 @media (max-width: 768px) {
-
     .cabecalho {
-        position: relative;
+        padding: 20px;
     }
 
     .cabecalho .esquerda {
@@ -163,46 +162,82 @@
         left: 0;
         width: 100%;
         background-color: #2E2C2F;
+        display: flex;
         flex-direction: column;
+        align-items: center;
         overflow: hidden;
         max-height: 0;
         opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-        z-index: 99;
+        padding: 0;
+        transition: max-height 0.5s ease-out, opacity 0.4s ease-out, padding 0.5s ease-out;
     }
 
     .cabecalho .esquerda.active {
-        max-height: 100px; 
+        max-height: 500px;
         opacity: 1;
-        padding: 10px 0 95px 0;
+        padding: 20px 0;
     }
 
     .hamb {
         display: block;
     }
 
-    .cabecalho .esquerda a,
-    .cabecalho .esquerda .dropbtn {
+    .cabecalho .esquerda .dropdown {
         display: block;
-        padding: 5px 20px;
-        width: 100%;
-        text-align: left;
+        padding: 10px 20px;
         box-sizing: border-box;
-        margin-top: 20px;
     }
-    
-    .dropdown {
+
+    .cabecalho .esquerda a {
+        display: block;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .cabecalho .esquerda a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #40DDA5;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.3s ease-out;
+    }
+
+    .cabecalho .esquerda a:hover {
+        color: #40DDA5;
+    }
+
+    .cabecalho .esquerda a:hover::before {
+        transform: scaleY(1);
+    }
+
+    .cabecalho .esquerda .link::after {
+        display: none;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        background-color: white;
+        box-shadow: none;
         width: 100%;
     }
 
-    .cabecalho .direita img {
-        width: 150px;
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     .rodape {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        text-align: center;
     }
 
     .rodape .icon {
@@ -215,10 +250,14 @@
     }
 }
 
+/* --- CELULARES PEQUENOS --- */
 @media (max-width: 480px) {
     .cabecalho {
-        justify-content: center;
-        gap: 60%;
+        padding: 15px;
+    }
+
+    .rodape {
+        padding: 20px 8%;
     }
 
     .rodape .icon {
@@ -228,16 +267,5 @@
 
     .rodape p {
         font-size: 12px;
-    }
-}
-
-@media (max-width: 375px) {
-    .rodape .icon {
-        height: 25px;
-        width: 25px;
-    }
-
-    .rodape {
-        padding: 20px 8%;
     }
 }

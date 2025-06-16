@@ -1,78 +1,104 @@
+/* ==========================================================================
+   ESTILOS GERAIS E CONTEÚDO PRINCIPAL
+   ========================================================================== */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+}
+
+/* Efeito de fade para o conteúdo carregado via JS */
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
-    padding-top: 7rem;
-    padding-bottom: 2rem;
+    justify-content: center;
+    padding: 7rem 2rem 2rem 2rem;
+    box-sizing: border-box;
 }
 
-/* LOGO GANHESH CENTRO PÁGINA INICIAL */
-
+/* --- LOGO CENTRAL --- */
 .center-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 100%;
+    max-width: 600px;
     gap: 1rem;
     margin-bottom: 8rem;
+    text-align: center;
 }
 
 .logo {
-    display: flex;
     width: 50%;
+    max-width: 250px;
 }
-
 
 .logo img {
     width: 100%;
+    height: auto;
 }
 
 #grupo {
     font-size: 3rem;
     color: white;
+    margin: 0;
 }
 
 #subtitulo {
     font-size: 1.2rem;
     color: white;
-    text-align: center;
+    margin: 0;
+    font-weight: 300;
 }
 
-/* SOBRE O GANESH */
-
+/* --- SEÇÃO "SOBRE" --- */
 .sobre {
     display: flex;
     flex-direction: column;
-    width: 65%;
-    align-items: start;
-    padding: 1rem;
+    width: 90%;
+    max-width: 800px;
+    align-items: flex-start;
+    padding: 2rem;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
     gap: 1rem;
     border-radius: 5px;
     color: white;
+    box-sizing: border-box;
 }
 
 #sobre-title {
     color: white;
     font-size: 1.5rem;
+    margin: 0;
 }
 
 #ganesh-span {
-    color: green;
-     font-size: 1.5rem;
+    color: #40DDA5;
+    font-size: 1.5rem;
 }
 
-.sobre-text {
+.sobre p {
     color: white;
     font-size: 0.9rem;
     font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
 }
 
-
-/* ESTILIZANDO O BOTÃO "SAIBA MAIS" */
+/* --- BOTÃO "SAIBA MAIS" --- */
 .sobre-button {
     color: white;
     background-color: rgba(0, 0, 0, 0);
@@ -83,73 +109,74 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-/* "LINHA" QUE PASSA PELO BOTÂO */
-.sobre-button::before {
-    content: " ";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 0.5px;
-    background-color: #0f0;
-    opacity: 0;
-    box-shadow: 0 0 10px rgba(0, 230, 0, 0.8);
-}
-
-.sobre-button:hover::before {
-    animation: laser 1.2s linear infinite alternate;
-    opacity: 0.9;
-    border: 2px solid #0f0;
-    transform: scale(1.02);
-
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 .sobre-button:hover {
     color: #0f0;
-    border: 2px solid #0f0;
+    border-color: #0f0;
     transform: scale(1.02);
-    overflow: hidden;
-
-
 }
 
-.destaque {
-    color: red;
+.sobre-button::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0;
+    box-shadow: 0 0 10px rgba(0, 230, 0, 0.8);
+    opacity: 0;
+}
+
+.sobre-button:hover::before {
+    opacity: 0.9;
+    animation: laser 1.2s linear infinite;
 }
 
 @keyframes laser {
     0% {
-        top: -80%;
+        top: -50%;
     }
-
     100% {
-        top: 180%;
+        top: 150%;
     }
 }
 
-/* MEDIA QUERIES PARA RESPONSIVIDADE */
+/* ==========================================================================
+   MEDIA QUERIES DE CONTEÚDO
+   ========================================================================== */
+
+/* --- TABLETS E CELULARES GRANDES --- */
 @media (max-width: 768px) {
-    .logo img {
-        width: 30%;
-        padding: 12.5% 0 20px 0;
+    .wrapper {
+        padding-top: 5rem;
     }
 
-    #subtitulo {
-        padding: 0 0 20% 0;
+    .center-content {
+        margin-bottom: 6rem;
+    }
 
+    .sobre {
+        width: 100%;
+        padding: 1.5rem;
     }
 }
 
+/* --- CELULARES PEQUENOS --- */
 @media (max-width: 480px) {
-    .logo img {
-        width: 40%;
-        padding: 45% 0 20px 0;
+    #grupo {
+        font-size: 2.5rem;
     }
 
     #subtitulo {
-        padding: 0 0 50% 0;
+        font-size: 1rem;
+    }
 
+    .center-content {
+        margin-bottom: 4rem;
     }
 }
